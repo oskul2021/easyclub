@@ -1,0 +1,54 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 9000
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3366/easyClubDB
+    username: root
+    password: root
+  jpa:
+    hibernate.ddl-auto: create-drop
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: ADMIN
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+  mail:
+    host: localhost
+    port: 1025
+    username: hello
+    password: hello
+
+    properties:
+     mail:
+       smtp:
+         ssl:
+          trust: "*"
+          auth: "true"
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+easyClub:
+  properties:
+    jwtSecret: HsEsslingenSecretKey
+    jwtExpirationMs: 86400000
+
+
+file:
+  path: /uploads

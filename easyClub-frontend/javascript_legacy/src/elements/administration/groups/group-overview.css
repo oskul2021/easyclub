@@ -1,0 +1,14 @@
+.group-card{
+	width: 12rem;
+	height: 6rem;
+	margin: 0.75rem;
+	outline: 1px solid darkgrey;
+}
+
+.group-card:hover{
+	cursor: pointer;
+	transform: scale(1.05);
+	outline: 1px solid #0b6ad7;
+	box-shadow: 0px 0px 4px #0b6ad7;
+	transition: 200ms;
+}
